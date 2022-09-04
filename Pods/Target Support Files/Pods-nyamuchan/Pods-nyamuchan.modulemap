@@ -1,0 +1,6 @@
+framework module Pods_nyamuchan {
+  umbrella header "Pods-nyamuchan-umbrella.h"
+
+  export *
+  module * { export * }
+}
