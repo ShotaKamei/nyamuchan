@@ -57,6 +57,7 @@ class ModalController: UIViewController, UIGestureRecognizerDelegate {
                 }
             }
             comp.append(["value":Int(levels), "label": nayami, "explanation": memo])
+            comp = Sort(comp)
             UserDefaults.standard.set(comp, forKey: "data")
             modaldelegate?.viewDidLoad()
             dismiss(animated: true, completion: nil)

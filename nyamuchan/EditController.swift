@@ -61,7 +61,7 @@ class EditController: UIViewController, UIGestureRecognizerDelegate {
                     comp.append(["value":Int(levels), "label": nayami, "explanation": memo])
                 }
                 }
-            
+            comp = Sort(comp)
             UserDefaults.standard.set(comp, forKey: "data")
             editdelegate?.viewDidLoad()
             dismiss(animated: true, completion: nil)
@@ -80,6 +80,7 @@ class EditController: UIViewController, UIGestureRecognizerDelegate {
                 comp.append(i)
             }
             }
+        
         if comp.isEmpty{
             UserDefaults.standard.removeObject(forKey: "data")
         
